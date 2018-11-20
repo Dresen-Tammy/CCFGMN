@@ -1,0 +1,153 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Index Page */
+.imgBox {
+    background-image: url(../images/family.png);
+    background-position: center; top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position:relative;
+}
+
+.homeA {
+    font-size: 50px;
+    padding: 20px 20px;
+    font-family: "Kaushan Script", cursive;
+    display: block;
+    color: #193e4e;
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+}
+.homeA:hover {
+    text-decoration: none;
+
+}
+/*Headings*/
+h4, h2 {
+    color: #193e4e;
+}
+a {
+    color: #749739;
+}
+/* Nav */
+#nav {
+    background-color: #8eb848;
+    border: none;
+}
+
+    #nav .navbar-brand {
+        color: #f2ebcf;
+    }
+
+        #nav .navbar-brand:hover {
+            color: #193e4e;
+        }
+
+        #nav .navbar-brand:active {
+            color: #dbeaf1;
+        }
+
+    #nav .navbar-nav .nav-button .nav-a:link, #nav .navbar-nav .nav-button .nav-a:visited {
+        color: #f2ebcf;
+    }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f2ebcf;
+}
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #193e4e;
+    }
+    .navbar-inverse .navbar-nav > li > a:active {
+        color: #dbeaf1;
+    }
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+#nav .navbar-nav .nav-button .nav-a:hover {
+    color: #193e4e;
+}
+
+#nav .navbar-nav .nav-button .nav-a:active {
+    color: #ffffff;
+}
+
+/*Tables*/
+form {
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+    form input, form .form-control {
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        padding: 5px;
+    }
+
+    form select {
+        border-radius: 2px;
+        padding: 5px;
+    }
+
+.filter {
+    margin-left: 8px;
+}
+
+.table {
+    border: 1px solid #decebe;
+    margin-top: 25px;
+    background-color: white;
+}
+    .table a {
+        color: #749739;
+    }
+        .table a:hover {
+            color: #045d91;
+        }
+
+thead {
+    background-color: #dbeaf1;
+}
+
+th {
+    color: #193e4e;
+}
+
+    .table th a {
+        color: #193e4e;
+        text-decoration: underline;
+    }
+
+    /*Button*/
+.button {
+    background-color: #193e4e;
+    color: #ffffff;
+    border: none;
+    padding: 7px 10px;
+    width: auto;
+    font-size: 16px;
+}
+    .button:hover {
+        color: #193e4e;
+        background-color: #f2ebcf;
+    }
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+    }

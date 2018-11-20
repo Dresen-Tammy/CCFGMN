@@ -1,0 +1,71 @@
+@model MvcMovie2.Models.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "CCFGMN | Movie Listings";
+}
+
+<h2>CCFGMN* Movies</h2>
+
+
+<p>
+    <a asp-action="Create">Add New Movie</a>
+</p>
+<form asp-controller="Movies" asp-action="Index" method="get">
+    <p>
+        Genre: <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
+         Title: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" class="button" /> 
+        <a asp-action="Index"> Return to Full List</a>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.NameSortParm, movieGenre = ViewBag.MovieGenreParm, searchString = ViewBag.SearchStringParm })
+            </th>
+            <th>
+                @Html.ActionLink("Release Date", "Index", new { sortOrder = ViewBag.DateSortParm, movieGenre = ViewBag.MovieGenreParm, searchString = ViewBag.SearchStringParm })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Movies) {
+        <tr>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Title)</a>
+</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<a href="./Home/About"><h4>*Corny Christian Feel-Good Movie Night</h4></a>
